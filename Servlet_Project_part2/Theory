@@ -1,0 +1,11 @@
+Learn configuring web.xml in this project:-
+++++++++++++++++++++++++++++++++++++++++++++
+
+Question:- Why we are not using Annotations so much if they are easy to use???
+
+Answer:- There are pros and cons of using annotations , below are the details-
+
+ 1. Annotation are supported only after java-5 version; so in order to understand the code which was written earlier, we need to know the web.xml way.
+ 2. Since Annotations are tied to a particular servlet/class, so everytime we make any change, we need to compile/package entire class whereas if we use web.xml we only 
+    need to restart the tomcat instance.
+ 

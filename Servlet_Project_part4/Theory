@@ -1,0 +1,12 @@
+Learn Scope of request,response,session and context objects:-
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+1. request and response objects are created by the Tomcat container per access.
+2. request object contains info about request and metadata associated with the request and response will be a clean slate handed over to the Custom Servlet class.
+3. Servlet itself is an object but it's not created per access;it gets reused using threads.
+4. session is an tomcat provided object which is used to make servlet remember the last supplied value to the servlet.but, it will 
+   not be available for all the users/browsers.
+5. context will solve problem of session object and makes attribute available across the application.
+   There is only context per application.
+
+

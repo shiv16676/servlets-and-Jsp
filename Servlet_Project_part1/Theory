@@ -1,0 +1,12 @@
+Learn Servlet basic using annotation way:-
+++++++++++++++++++++++++++++++++++++++++++++
+
+
+Program flow:-
+***************
+http://localhost:<port>    --------------------------------> picks the tomcat instance
+http://localhost:<port>/<context_root>  -------------------> Tomcat to identify which web project to call.
+http://localhost:<port>/<context_root>/<url-pattern> ------> Tomcat to identify which servlet/class to call
+
+a. We can call any servlet either by defining them in web.xml OR using annotations.
+b. Here we are using Annotation ; in the next project we will use web.xml file to configure the servlet

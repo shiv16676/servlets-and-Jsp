@@ -1,0 +1,44 @@
+Learn why and how to use JSP:-
+*****************************
+
+Why?
+****
+Since in servlets we need to write too much of html code which is very hectic.
+
+How?
+****
+1. we can use Jsp tags to easily accomplish things. 
+   a. Every JSP page gets converted to a Servlet by the tomcat container.
+   b. location of .class and jsp file is inside of tomcat work directory.(e.g-  D:\Alfresco\tomcat\work\Catalina\localhost\Servlet_Project_part5\org\apache\jsp)
+   c. So, if we look at the java file , we can see that all the static code---->out.write(); 
+      and all the code inside scriplet tags <% %> converted to java code inside of jspservice(); 
+   d. All definitions code which is inside of <%! %> will be added inside of class in java file.
+2. Every line of code inside of <% %> will go to doGET() method of servlet that will be created by tomcat.
+3. Since we cannot define any method inside of any other method , that's why we can define any method inside of scriplet tags <% %>;
+   So, whatever definition we want, we can define that in declarative tag- <%! %> and that will remain outside of doGET().
+   
+   
+JSP Stuff:-
+**********
+1. To define any method , declare it inside of declaration/definition <%! %> tag.
+2. To write any java code , write it inside of scriplet tag <%= %>
+3. To import anything java classes, u can add import inside of page directive.
+4. If we have a lot of imports, then we can open a new page directive and all imports inside that so that it's easier to maintain.
+5. Include directive:- It allows us to embed the output of any other jsp to any particular jsp by adding <%@ include file="/<jsp_name>"%>
+6. JSP has some (total=9)implicit objects available for us to use directly , they are-
+   a.out 	
+   b.request 	
+   c.response 	
+   d.session 	
+   e.application 	
+   f.exception 	
+   g.page 	
+   h.pageContext 	
+   i.config
+   
+   Refer Objects.jsp in this project to see implementation details.
+   
+   
+ Using JSPInit and InitParams:-
+ ********************************
+ refer InitPage.jsp of this project

@@ -1,0 +1,22 @@
+Learn post method and passing arguments:-
+++++++++++++++++++++++++++++++++++++++++++++
+
+http://localhost:8081/Servlet_Project_part3/xmlServletPath?userName=Shiv
+we need to get this parameter using request.getParameter method and display it to the page.
+
+
+GET v/s POST method:-
+**********************
+1. Parameter hiding as in the Post method the parameter goes in the request body.
+2. Get() - used to get values from the database.
+   Post() - used to write/post/edit the data to the database.
+   
+   So, when we refresh the url of post , it asks us to confirm "Are you sure to perform refresh?" whereas in get() it won't.
+
+
+For Multiple value HTML controls like drop-down and checkbox:-
+*************************************************************
+We cannot use request.getParameter as it will only give us the first value.So, we should use something else.
+we can use request.getParameterValues method to get multiple values and store in an array.
+
+e.g String [] location = request.getParameterValues("location");
